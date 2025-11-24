@@ -1,0 +1,196 @@
+/* =========================================
+   GLOBAL RESET & BASE STYLE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 40px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+h2 {
+    background: linear-gradient(135deg, #3d3d3d, #1a1a1a);
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   LAYOUT 2 KOLOM (FORM + GUIDE)
+========================================= */
+.container {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* =========================================
+   FORM STYLE
+========================================= */
+form {
+    background: #ffffff;
+    padding: 28px;
+    width: 100%;
+    max-width: 390px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+    animation: fadeIn 0.4s ease;
+    border: 1px solid #e1e1e1;
+}
+
+label {
+    margin-top: 14px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1.8px solid #d0d0d0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    background: #fafafa;
+}
+
+input:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,123,255,0.35);
+}
+
+button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #222, #000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3a3a3a, #000);
+    transform: scale(1.03);
+}
+
+/* =========================================
+   GUIDE BOX (PANDUAN)
+========================================= */
+.guide-box {
+    background: #ffffff;
+    padding: 24px;
+    width: 330px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+    animation: fadeIn 0.5s ease;
+    border: 1px solid #e1e1e1;
+}
+
+.guide-box h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #222;
+}
+
+.guide-box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #555;
+}
+
+.guide-box ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.guide-box ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* =========================================
+   TABLE STYLE
+========================================= */
+table {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+    animation: fadeIn 0.6s ease;
+}
+
+th {
+    background: #1a1a1a;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+tr:hover {
+    background: #ececec;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media(max-width: 820px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
